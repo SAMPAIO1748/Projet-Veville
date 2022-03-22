@@ -2,20 +2,22 @@
 
 $nom_fichier = $_FILES['image']['name'];
 $fichier = $_FILES['image']['tmp_name'];
-$dossier_image = "img/" . $nom_fichier;
+$dossier = "img/" . $nom_fichier;
 
-move_uploaded_file($fichier, $dossier_image);
+move_uploaded_file($fichier, $dossier);
 
-$bdd = new PDO("mysql:host=localhost;dbname=veville", "root", "root");
-$sql = "INSERT INTO vehicule (titre, marque, modele, description, image, prix_journalier, id_agence) VALUES (:titre, :marque, :modele, :description, :image, :prix_journalier, :id_agence)";
+$bdd = new PDO("mysql:host=localhost;dbname=veville", 'root', 'root');
+$sql = "UPDATE vehicule SET titre = :titre, modele = :modele, marque = :marque, description = :description, 
+prix_journalier = :prix, id_agence = :id_agence, image = :image WHERE id_vehicule = :id";
 $requete = $bdd->prepare($sql);
 $requete->bindValue(':titre', $_POST['titre'], PDO::PARAM_STR);
 $requete->bindValue(':marque', $_POST['marque'], PDO::PARAM_STR);
 $requete->bindValue(':modele', $_POST['modele'], PDO::PARAM_STR);
 $requete->bindValue(':description', $_POST['description'], PDO::PARAM_STR);
 $requete->bindValue(':image', $nom_fichier, PDO::PARAM_STR);
-$requete->bindValue(':prix_journalier', $_POST['prix'], PDO::PARAM_STR);
+$requete->bindValue(':prix', $_POST['prix'], PDO::PARAM_STR);
 $requete->bindValue(':id_agence', $_POST['agence'], PDO::PARAM_INT);
+$requete->bindValue(':id', $_POST['id'], PDO::PARAM_INT);
 $requete->execute();
 
-header('Location: vehicule_list.php');
+header("Location: vehicule_list.php");

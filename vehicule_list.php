@@ -21,7 +21,7 @@
 
     $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
 
-    var_dump($resultat);
+    //var_dump($resultat);
 
     ?>
 
@@ -54,7 +54,9 @@
                     "<img src='img/" .  $vehicule['image'] . "'></td><td>" .
                     $vehicule['prix_journalier'] . "</td><td>" .
                     "<a href='vehicule_show.php?id=" . $vehicule['id_vehicule'] .
-                    "'><i class=\"fa-solid fa-magnifying-glass\"></i></a></td></tr>";
+                    "'><i class=\"fa-solid fa-magnifying-glass\"></i></a><a href='vehicule_form_update.php?id="
+                    . $vehicule['id_vehicule'] . "'><i class='fa-solid fa-pencil'></i></a><a href='delete_vehicule.php?id=" .
+                    $vehicule['id_vehicule'] . "'><i class='fa-solid fa-trash'></i></a></td></tr>";
             }
 
             ?>
