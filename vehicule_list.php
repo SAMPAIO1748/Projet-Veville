@@ -67,39 +67,50 @@
 
     <form action="add_vehicule.php" method="post" enctype="multipart/form-data">
 
-        <label for="titre">Titre</label>
-        <input type="text" name="titre" id="titre">
+        <div class="form">
+            <div class="form-left">
+                <label for="titre">Titre</label>
+                <input type="text" name="titre" id="titre">
 
-        <label for="marque">Marque</label>
-        <input type="text" name="marque" id="marque">
+                <label for="marque">Marque</label>
+                <input type="text" name="marque" id="marque">
 
-        <label for="modele">Modele</label>
-        <input type="text" name="modele" id="modele">
+                <label for="modele">Modele</label>
+                <input type="text" name="modele" id="modele">
 
-        <label for="prix">Prix</label>
-        <input type="text" name="prix" id="prix">
+                <label for="prix">Prix</label>
+                <input type="text" name="prix" id="prix">
+            </div>
 
-        <label for="image">Image</label>
-        <input type="file" name="image" id="image">
+            <div class="form-right">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image">
 
-        <label for="agence">Agence</label>
-        <select name="agence" id="agence">
+                <label for="agence">Agence</label>
+                <select name="agence" id="agence">
 
-            <?php
+                    <?php
 
-            foreach ($resultat as $agence) {
-                echo "<option value='" . $agence['id_agence'] . "'>" . $agence['enseigne'] . "</option>";
-            }
+                    foreach ($resultat as $agence) {
+                        echo "<option value='" . $agence['id_agence'] . "'>" . $agence['enseigne'] . "</option>";
+                    }
 
-            ?>
+                    ?>
 
 
-        </select>
+                </select>
 
-        <label for="description">Description</label>
-        <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <label for="description">Description</label>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
 
-        <input type="submit" value="Enregistrer">
+
+            </div>
+        </div>
+
+        <div class="bouton">
+            <input type="submit" value="Enregistrer" class="button">
+        </div>
+
 
     </form>
 

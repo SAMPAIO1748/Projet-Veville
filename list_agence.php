@@ -63,25 +63,39 @@
 
     <form action="add_agence.php" method="post" enctype="multipart/form-data">
 
-        <label for="enseigne">Enseigne</label>
-        <input type="text" name="enseigne" id="enseigne">
+        <div class="form">
+            <div class="form-left">
 
-        <label for="description">Description</label>
-        <textarea name="description" id="description" cols="20" rows="5"></textarea>
+                <label for="enseigne">Enseigne</label>
+                <input type="text" name="enseigne" id="enseigne">
 
-        <label for="adresse">Adresse</label>
-        <input type="text" name="adresse" id="adresse">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="20" rows="5"></textarea>
 
-        <label for="ville">Ville</label>
-        <input type="text" name="ville" id="ville">
+                <label for="photo">Photo</label>
+                <input type="file" name="photo" id="photo">
 
-        <label for="cp">Code Postal</label>
-        <input type="number" name="cp" id="cp">
+            </div>
 
-        <label for="photo">Photo</label>
-        <input type="file" name="photo" id="photo">
+            <div class="form-right">
 
-        <input type="submit" value="Enregistrer">
+                <label for="adresse">Adresse</label>
+                <input type="text" name="adresse" id="adresse">
+
+                <label for="ville">Ville</label>
+                <input type="text" name="ville" id="ville">
+
+                <label for="cp">Code Postal</label>
+                <input type="number" name="cp" id="cp">
+
+            </div>
+
+        </div>
+
+        <div class="bouton">
+            <input type="submit" value="Enregistrer" class="button">
+        </div>
+
 
 
     </form>
