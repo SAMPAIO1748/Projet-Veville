@@ -66,6 +66,51 @@
 
     </table>
 
+    <form action="create_membre.php" method="post">
+
+        <div class="form">
+            <div class="form-left">
+
+                <label for="pseudo">Pseudo</label>
+                <input type="text" name="pseudo" id="pseudo">
+
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom">
+
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" id="prenom">
+
+                <label for="mdp">Mot de passe</label>
+                <input type="password" name="mdp" id="mdp">
+
+            </div>
+
+            <div class="form-right">
+
+                <label for="mail">Email</label>
+                <input type="email" name="mail" id="mail">
+
+                <label for="civilite">Civilité</label>
+                <input type="text" name="civilite" id="civilite">
+
+                <label for="statut">Code Postal</label>
+                <select name="statut" id="statut">
+                    <option value="0">Admin</option>
+                    <option value="1">Membre</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="bouton">
+            <input type="submit" value="Enregistrer" class="button">
+        </div>
+
+
+
+    </form>
+
 </body>
 
 </html>
