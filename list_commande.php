@@ -13,6 +13,13 @@
 <body>
     <?php
 
+    if (empty($_SESSION['nom']) && empty($_SESSION['prenom']) && empty($_SESSION['pseudo']) && empty($_SESSION['email']) && empty($_SESSION['statut'])) {
+        header("Location: login.php");
+    }
+    if ($_SESSION['statut'] == 1) {
+        header("Location: mon_compte.php");
+    }
+
     $bdd = new PDO('mysql:host=localhost;dbname=veville', 'root', 'root');
     $sql = "SELECT * FROM commande INNER JOIN vehicule ON commande.id_vehicule = vehicule.id_vehicule INNER JOIN agences ON commande.id_agence = agences.id_agence
     INNER JOIN membre ON commande.id_membre = membre.id_membre";

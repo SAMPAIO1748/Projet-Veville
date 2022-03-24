@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,6 +18,13 @@
 
     <?php
 
+    if (empty($_SESSION['nom']) && empty($_SESSION['prenom']) && empty($_SESSION['pseudo']) && empty($_SESSION['email']) && empty($_SESSION['statut'])) {
+        header("Location: login.php");
+    }
+    if ($_SESSION['statut'] == 1) {
+        header("Location: mon_compte.php");
+    }
+
     $bdd = new PDO('mysql:host=localhost;dbname=veville', 'root', 'root');
     $sql = "SELECT * FROM agences INNER JOIN vehicule ON agences.id_agence = vehicule.id_agence";
     $requete = $bdd->prepare($sql);
@@ -22,6 +33,7 @@
     $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
 
     //var_dump($resultat);
+    //var_dump($_SESSION);
 
     ?>
 

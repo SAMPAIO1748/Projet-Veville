@@ -1,4 +1,14 @@
 <?php
+session_start();
+?>
+<?php
+
+if (empty($_SESSION['nom']) && empty($_SESSION['prenom']) && empty($_SESSION['pseudo']) && empty($_SESSION['email']) && empty($_SESSION['statut'])) {
+    header("Location: login.php");
+}
+if ($_SESSION['statut'] == 1) {
+    header("Location: mon_compte.php");
+}
 
 $bdd = new PDO('mysql:host=localhost;dbname=veville', 'root', 'root');
 $sql = "UPDATE membre SET pseudo = :pseudo, nom = :nom, prenom = :prenom, email = :mail, civilite = :civilite, statut = :statut, mdp = :mdp WHERE id_membre = :id";

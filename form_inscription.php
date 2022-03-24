@@ -11,6 +11,8 @@
 
 <body>
 
+
+
     <h1>Formulaire d'inscription</h1>
     <h2>Rentrer les informations demandées pour vous inscrire</h2>
 

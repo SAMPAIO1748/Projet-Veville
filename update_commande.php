@@ -1,4 +1,14 @@
 <?php
+session_start();
+?>
+<?php
+
+if (empty($_SESSION['nom']) && empty($_SESSION['prenom']) && empty($_SESSION['pseudo']) && empty($_SESSION['email']) && empty($_SESSION['statut'])) {
+    header("Location: login.php");
+}
+if ($_SESSION['statut'] == 1) {
+    header("Location: mon_compte.php");
+}
 
 $bdd = new PDO('mysql:host=localhost;dbname=veville', 'root', 'root');
 $sql = "UPDATE commande SET date_heure_depart = :date_depart, date_heure_fin = :date_fin, 
