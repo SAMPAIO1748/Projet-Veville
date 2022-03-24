@@ -45,7 +45,7 @@
             foreach ($resultat as $commande) {
                 echo "<tr><td>" . $commande['id_commande'] . "</td><td>" .
                     $commande['id_membre'] . " - "  . $commande['nom'] . " " . $commande['prenom'] . " - " . $commande['email'] . "</td><td>" .
-                    $commande['id_vehicule'] . " - " . $commande['marque'] . " " . $commande['marque'] . "</td><td>" .
+                    $commande['id_vehicule'] . " - " . $commande['marque'] . " " . $commande['modele'] . "</td><td>" .
                     $commande['id_agence'] . " - " . $commande['enseigne'] . "</td><td>" .
                     $commande['date_heure_depart'] . "</td><td>" .
                     $commande['date_heure_fin'] . "</td><td>" .
