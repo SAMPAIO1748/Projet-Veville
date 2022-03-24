@@ -57,3 +57,21 @@ label {
 .form-right input {
   width: 100%;
 }
+
+h1,
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+h1 {
+  color: rgb(1, 1, 195);
+}
+
+h2 {
+  color: rgb(31, 31, 253);
+}
+
+label {
+  margin-top: 3%;
+}

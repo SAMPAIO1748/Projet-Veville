@@ -11,6 +11,9 @@
 
 <body>
 
+    <h1>Formulaire d'inscription</h1>
+    <h2>Rentrer les informations demandées pour vous inscrire</h2>
+
     <form action="add_inscription.php" method="post">
 
         <div class="form">
