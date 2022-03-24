@@ -93,7 +93,7 @@
                 <label for="civilite">Civilité</label>
                 <input type="text" name="civilite" id="civilite">
 
-                <label for="statut">Code Postal</label>
+                <label for="statut">Statut</label>
                 <select name="statut" id="statut">
                     <option value="0">Admin</option>
                     <option value="1">Membre</option>
