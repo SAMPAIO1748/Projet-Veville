@@ -75,3 +75,29 @@ h2 {
 label {
   margin-top: 3%;
 }
+
+.voiture {
+  background-image: url("https://images.caradisiac.com/images/3/0/3/7/193037/S0-porsche-panamera-une-platinum-edition-696118.jpg");
+}
+
+header {
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+}
+
+.form_commande {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  margin: 20% auto;
+}
+
+.form_commande input {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}

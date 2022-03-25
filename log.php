@@ -20,6 +20,7 @@ if (!$resultat) {
     $_SESSION['prenom'] = $resultat['prenom'];
     $_SESSION['email'] = $resultat['email'];
     $_SESSION['statut'] = $resultat['statut'];
+    $_SESSION['id_membre'] = $resultat['id_membre'];
 
     header('Location: mon_compte.php');
 }
